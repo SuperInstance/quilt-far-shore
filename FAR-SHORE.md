@@ -263,3 +263,64 @@ What the shore gained: a fact-keyed freeze that actually fires, a split that
 refuses to be laundered, and guards that turn incidents into tamper-evident
 receipts. What stays open: R2's calculus (deferred by the sequencing note), the
 frozen table's promotion path, and the monitors' ride-along on future sessions.
+
+---
+
+## Receipts — wave 71-d-r2 (the finisher): R2 derived cells run beside untouched claims
+
+The last un-run registered experiment executed per REVERSE-ACTUALIZE.md R2 verbatim
+(claims sealed and pushed in `fleet-seeds` @ e0c8709 BEFORE any run — preregister
+`seeds/preregister-71d.json`, claimsHash `sha256:17f0019d882067219634105d9717ce10c70c52808dcf3fb2198357ca18517fc4`,
+verified remote==local at seal time; the fictional far shore above is untouched —
+everything below is additive receipt).
+
+- **Artifact.** `src/calculus.js` — `rate` / `accum` / `lag` as ONE pure module
+  (spec/primitives-v2.md §B.2 semantics verbatim: backward difference with the
+  deadband law `|ΔV| < 0.04 → 0 exactly` — the isDegenerate spread law; level
+  trapezoid / directional-flow accum; Pearson-argmax lag), incremental fold
+  partials keyed `(cell, op, window, seq)` proven equal to recompute-from-genesis
+  (observation, never transition), consuming quilt-chrono's ledger API READ-ONLY
+  (`src/ledger.js loadLedger` over the real dogfood ledger
+  `examples/tide/outputs/ledger.jsonl`, sha256 before==after) and the real
+  wave-67 battery (`quilt-storefront/runs/live-session-2.jsonl`, 24 turns).
+  Tests: `tests/r2-calculus.test.mjs` 9/9 — the registered predictions as
+  assertions. Overlay: `results/r2-overlay.svg` (5,419 bytes) rendered through
+  quilt-chrono's EXISTING `renderSVG` — the battery's time dimension as calculus.
+  Receipt: `results/R2.json`. **ZERO model calls, zero network, moth unspent** (the
+  registered 0–1 optional `comet-qrng-v1` job left unspent — the zero-call channel stayed zero-call).
+- **P1 deadband — PASS.** Constant stream exactly 0 within 1e-9 at windows 1/2/4;
+  ±ε/2 jitter stays 0 (|ΔV| = ε/2 < ε killed); ±2ε jitter oscillates (|ΔV| = 4ε
+  survives) — the honest sensitivity boundary named, not hidden.
+- **P2 sinusoid — PENDING (named, per the claim's own sealed refusal branch).**
+  The sealed analytic ∫₄²⁰ (16 units) does not match the spec-B3.2-faithful
+  trapezoid support [5,20] (15 units) — a pre-run window mis-declaration in the
+  claim text, discovered at run time. Both errors receipted in `results/R2.json`:
+  sealed-window rel err 0.1014; support-matched rel err **0.00033** (well inside
+  1%). The sealed comparator was NOT re-scored (no threshold surgery — claims
+  untouched); the instrument's correctness is additionally asserted 9/9 in tests.
+- **P3 the decisive one — PASS.** On the real battery, the `rate` cell over
+  turn latency (turn_ms; threshold-alarm bar 2×mean-nonzero = 6242.2 ms) and over
+  the refunder's distress (`refunderPreVector`, T22 fail-closed = null carried)
+  flags ALL THREE R3-receipted incidents within ≤2 turns of onset — greeter
+  truncation silences T6 (rate 2672.0) and T13 (2432.5), refunder fail-closed T22
+  (2308.5, plus the distress crash read at T23: (0.10−0.42)/2 = −0.16) — while
+  the plain threshold alarm on the same streams flags NONE (latency bar 6242.2 >
+  max 5344; distress bar 0.68 > max 0.42). Full flag sets receipted, nothing
+  hidden: the derivative also flags 10 non-incident latency turns (every model
+  turn's onset is a real derivative — that is what a rate cell sees), and the
+  claim's edge was that the level alarm's blindspot is exactly where the incidents
+  live. "Report it, don't tune it away" was obeyed in both directions.
+- **P4 conservation + custody (mission-directed additive claim) — PASS.**
+  d/dt of the integral == the original flow EXACTLY (max err ≤ 1e-9) on the
+  synthetic flow and on the battery's real per-turn spend flow
+  (`usage.estimated_cost` — accum = cumulative spend). Spec §B.3 examples
+  reproduce through the same operators: rate(T17)=0 deadband-exact, rate(T23)=−0.16,
+  accum (turn 5, 24] = 4.50 distress·turns (2.94 + 1.56) on the REAL distress
+  stream (T10/T17/T23 prevalences 0.42/0.42/0.10), lag argmax = 1 with corr_k1 = 1.0.
+- **Verdict seal.** `fleet-seeds tools/preregister.mjs score` →
+  `seeds/preregister-71d.verdict.json`: **P1 PASS, P2 PENDING, P3 PASS, P4 PASS**
+  (3 PASS / 0 FAIL / 0 VACUOUS / 1 PENDING) — scored beside untouched claims,
+  claimsHash verified. With 69-d's R1 (3/3 PASS @ f2699e1) and R3 (3/3 PASS), **all
+  three registered far-shore experiments have now RUN** — R2's calculus cells are
+  real, free (zero calls), and out-detect their threshold baselines on the data
+  that spawned them.

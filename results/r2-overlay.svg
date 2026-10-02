@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="192" viewBox="0 0 980 192" font-family="ui-monospace, Menlo, monospace">
+<rect width="980" height="192" fill="#0d1117"/>
+<text x="168" y="30" fill="#e6edf3" font-size="15" font-weight="bold">R2 overlay — wave-67 battery: per-turn latency + refunder distress (rate cells in results/R2.json)</text>
+<text x="168" y="50" fill="#8b949e" font-size="11">2026-10-02T06:02:10.597Z &#8594; 2026-10-02T06:02:29.140Z &#183; lanes: 2 &#183; writes: 23 &#183; reads: 0 &#183; tide-held: 0 &#183; arcs: 0</text>
+<text x="168" y="66" fill="#6e7681" font-size="10">legend: write = &#9679; &#183; read = tick &#183; tide-held = &#9697; &#183; push/evaluate flow = arc (read lane &#8594; write lane)</text>
+<line x1="168.0" y1="72" x2="168.0" y2="154" stroke="#21262d" stroke-width="1"/>
+<line x1="266.0" y1="72" x2="266.0" y2="154" stroke="#21262d" stroke-width="1"/>
+<line x1="364.0" y1="72" x2="364.0" y2="154" stroke="#21262d" stroke-width="1"/>
+<line x1="462.0" y1="72" x2="462.0" y2="154" stroke="#21262d" stroke-width="1"/>
+<line x1="560.0" y1="72" x2="560.0" y2="154" stroke="#21262d" stroke-width="1"/>
+<line x1="658.0" y1="72" x2="658.0" y2="154" stroke="#21262d" stroke-width="1"/>
+<line x1="756.0" y1="72" x2="756.0" y2="154" stroke="#21262d" stroke-width="1"/>
+<line x1="854.0" y1="72" x2="854.0" y2="154" stroke="#21262d" stroke-width="1"/>
+<line x1="952.0" y1="72" x2="952.0" y2="154" stroke="#21262d" stroke-width="1"/>
+<rect x="0" y="78" width="980" height="34" fill="#11161d"/>
+<line x1="168" y1="112.0" x2="952" y2="112.0" stroke="#21262d" stroke-width="1"/>
+<text x="12" y="99.0" fill="hsl(88,70%,72%)" font-size="11">latency.ms</text>
+<rect x="0" y="112" width="980" height="34" fill="#161b22"/>
+<line x1="168" y1="146.0" x2="952" y2="146.0" stroke="#21262d" stroke-width="1"/>
+<text x="12" y="133.0" fill="hsl(230,70%,72%)" font-size="11">refunder.distress</text>
+<circle class="wr" cx="168.0" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>3 latency.ms = 0 (init)</title></circle>
+<circle class="wr" cx="168.0" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>4 latency.ms = 0 (init)</title></circle>
+<circle class="wr" cx="168.0" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>5 latency.ms = 0 (init)</title></circle>
+<circle class="wr" cx="168.0" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>6 latency.ms = 5344 (init)</title></circle>
+<circle class="wr" cx="394.0" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>7 latency.ms = 0 (init)</title></circle>
+<circle class="wr" cx="394.0" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>8 latency.ms = 0 (init)</title></circle>
+<circle class="wr" cx="394.0" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>9 latency.ms = 0 (init)</title></circle>
+<circle class="wr" cx="394.0" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>10 latency.ms = 3921 (init)</title></circle>
+<circle class="wr" cx="394.0" cy="129.0" r="3.1" fill="hsl(230,75%,62%)" fill-opacity="0.92"><title>10 refunder.distress = 0.42 (init)</title></circle>
+<circle class="wr" cx="559.8" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>11 latency.ms = 0 (init)</title></circle>
+<circle class="wr" cx="559.8" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>12 latency.ms = 262 (init)</title></circle>
+<circle class="wr" cx="570.9" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>13 latency.ms = 4865 (init)</title></circle>
+<circle class="wr" cx="776.6" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>14 latency.ms = 0 (init)</title></circle>
+<circle class="wr" cx="776.6" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>15 latency.ms = 0 (init)</title></circle>
+<circle class="wr" cx="776.6" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>16 latency.ms = 0 (init)</title></circle>
+<circle class="wr" cx="776.6" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>17 latency.ms = 3909 (init)</title></circle>
+<circle class="wr" cx="776.6" cy="129.0" r="3.1" fill="hsl(230,75%,62%)" fill-opacity="0.92"><title>17 refunder.distress = 0.42 (init)</title></circle>
+<circle class="wr" cx="941.9" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>18 latency.ms = 0 (init)</title></circle>
+<circle class="wr" cx="941.9" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>19 latency.ms = 0 (init)</title></circle>
+<circle class="wr" cx="941.9" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>20 latency.ms = 240 (init)</title></circle>
+<circle class="wr" cx="952.0" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>21 latency.ms = 0 (init)</title></circle>
+<circle class="wr" cx="952.0" cy="95.0" r="3.1" fill="hsl(88,75%,62%)" fill-opacity="0.92"><title>22 latency.ms = 4617 (init)</title></circle>
+<circle class="wr" cx="952.0" cy="129.0" r="3.1" fill="hsl(230,75%,62%)" fill-opacity="0.92"><title>22 refunder.distress = 0.42 (init)</title></circle>
+<text x="12" y="178" fill="#6e7681" font-size="10">quilt.chrono.entry/v1 &amp;#183; ledger tip seq 27 &amp;#183; rendered from the actual ledger, 2026-10-02T20:40:42.393Z</text>
+</svg>

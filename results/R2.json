@@ -1,0 +1,198 @@
+{
+  "kind": "r2-calculus-receipt",
+  "wave": "71-d-r2",
+  "at_utc": "2026-10-02T20:40:42.381Z",
+  "design": "REVERSE-ACTUALIZE.md R2 (run verbatim; prereg seeds/preregister-71d.json, claimsHash sha256:17f0019d…)",
+  "zero_model_calls": true,
+  "streams": {},
+  "metrics": {
+    "metrics": {
+      "p1_constant_zero": 1,
+      "p1_half_jitter_zero": 1,
+      "p1_double_jitter_oscillates": 1,
+      "p1_deadband_holds": 1,
+      "p2_sinusoid_relerr_sealed_window": 0.10141845244449978,
+      "p2_sinusoid_relerr_support_matched": 0.00033086439748264364,
+      "p3_derivative_flags": 3,
+      "p3_threshold_flags": 0,
+      "p3_derivative_outdetects": 1,
+      "p4_conservation": 1,
+      "p4_spec_examples": 1,
+      "p4_custody_incremental_eq_genesis": 1,
+      "p4_chrono_readonly": 1,
+      "p4_conservation_and_examples": 1
+    }
+  },
+  "detail": {
+    "p1": {
+      "epsilon": 0.04,
+      "constant_windows": [
+        1,
+        2,
+        4
+      ],
+      "J2_sample_rates": []
+    },
+    "p2": {
+      "accum": 7.957987807518376,
+      "analyticSealed": 8.856166509502975,
+      "analyticSupport": 7.9606216938186884,
+      "relSealed": 0.10141845244449978,
+      "relSupport": 0.00033086439748264364,
+      "pending_reason": "sealed analytic window (4,20] = 16 units vs spec-B3.2-faithful trapezoid support [5,20] = 15 units — window mis-declared pre-run; PENDING per the sealed refusal branch, claims untouched, both errors receipted"
+    },
+    "p3": {
+      "incidents": [
+        6,
+        13,
+        22
+      ],
+      "latency_threshold": 6242.2,
+      "distress_threshold": 0.68,
+      "derivative_flags_latency": [
+        3,
+        6,
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        17,
+        19,
+        20,
+        22,
+        23,
+        24
+      ],
+      "derivative_flags_distress": [
+        23
+      ],
+      "threshold_flags_latency": [],
+      "threshold_flags_distress": [],
+      "derivative_flagged_incidents": [
+        6,
+        13,
+        22
+      ],
+      "threshold_flagged_incidents": [],
+      "distress_stream_real_readings": [
+        {
+          "t": 10,
+          "v": 0.42,
+          "carried": false
+        },
+        {
+          "t": 17,
+          "v": 0.42,
+          "carried": false
+        },
+        {
+          "t": 22,
+          "v": 0.42,
+          "carried": true
+        },
+        {
+          "t": 23,
+          "v": 0.1,
+          "carried": false
+        }
+      ]
+    },
+    "p4_examples": {
+      "rate_T17": 0,
+      "rate_T23": -0.15999999999999998,
+      "accum_5_24": 4.5,
+      "breakdown": [
+        {
+          "from": 10,
+          "to": 17,
+          "seg": 2.94
+        },
+        {
+          "from": 17,
+          "to": 23,
+          "seg": 1.56
+        }
+      ],
+      "lag": {
+        "corrs": [
+          {
+            "k": 0,
+            "corr": 0.41666666666666674,
+            "support": 7,
+            "reported": true
+          },
+          {
+            "k": 1,
+            "corr": 1,
+            "support": 6,
+            "reported": true
+          },
+          {
+            "k": 2,
+            "corr": 0.16666666666666669,
+            "support": 5,
+            "reported": true
+          }
+        ],
+        "argmax_lag": 1
+      }
+    },
+    "chrono_dogfood": {
+      "ledgerFile": "/home/z/my-project/quilt-chrono/examples/tide/outputs/ledger.jsonl",
+      "entries": 547,
+      "cells": 6,
+      "probe": {
+        "sensor.raw": {
+          "n": 41,
+          "rateSample": {
+            "t": 534,
+            "value": 1.6000000000000014,
+            "delta": 3.200000000000003,
+            "back_t": 521
+          },
+          "accumFull": 34875.625
+        },
+        "sensor.calibrated": {
+          "n": 40,
+          "rateSample": {
+            "t": 541,
+            "value": 3.200000000000003,
+            "delta": 6.400000000000006,
+            "back_t": 528
+          },
+          "accumFull": 69268.9
+        },
+        "sink.display": {
+          "n": 40,
+          "rateSample": {
+            "t": 543,
+            "value": 3.200000000000003,
+            "delta": 6.400000000000006,
+            "back_t": 530
+          },
+          "accumFull": 69268.9
+        },
+        "sink.alert": {
+          "n": 8,
+          "rateSample": {
+            "t": 492,
+            "value": 25.599999999999994,
+            "delta": 51.19999999999999,
+            "back_t": 425
+          },
+          "accumFull": 58746.049999999996
+        }
+      },
+      "shaBefore": "cddcbc8d202c272e2c2c9ff598c62b3021d9928e8c1fc34d5256351344436b87",
+      "shaAfter": "cddcbc8d202c272e2c2c9ff598c62b3021d9928e8c1fc34d5256351344436b87",
+      "readonly": true
+    },
+    "overlay": {
+      "file": "results/r2-overlay.svg",
+      "via": "quilt-chrono src/projection.js renderSVG",
+      "bytes": 5419
+    }
+  }
+}
