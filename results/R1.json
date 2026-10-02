@@ -1,0 +1,1039 @@
+{
+  "kind": "r1-run-receipt",
+  "wave": "69-d",
+  "at_utc": "2026-10-02T18:35:46.264Z",
+  "design": "REVERSE-ACTUALIZE.md R1 (run verbatim; prereg seeds/preregister-69d.json P1/P2, claimsHash sha256:6058255b…)",
+  "grammar": "scripts/r1-grammar.mjs — receipt-present / amount-band / product-class, zero model calls (L2), unknown literal (L1)",
+  "sweep_family": {
+    "K1": [
+      "receipt-present"
+    ],
+    "K2": [
+      "receipt-present",
+      "product-class"
+    ],
+    "K3": [
+      "receipt-present",
+      "product-class",
+      "amount-band"
+    ]
+  },
+  "threshold": 3,
+  "buckets": [
+    2,
+    3,
+    4
+  ],
+  "corpus": [
+    {
+      "id": "live-session.jsonl#L30",
+      "session": "live-session-1 (wave-66 clean run)",
+      "register": "legacy",
+      "message": "the milk I bought yesterday spoiled early and I am upset",
+      "vector": {
+        "distress": 0.42,
+        "goodwill": 0.4,
+        "repeat-customer": 0.2
+      },
+      "output": "store credit",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "unknown",
+          "evidence": null,
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "unknown",
+          "evidence": null,
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "milk",
+          "evidence": "milk",
+          "how": "rule"
+        }
+      ],
+      "source": "legacy-receipted"
+    },
+    {
+      "id": "live-session.jsonl#L37",
+      "session": "live-session-1 (wave-66 clean run)",
+      "register": "legacy",
+      "message": "my socks ripped on the first wear, can I return them",
+      "vector": {
+        "distress": 0.1,
+        "goodwill": 0.4,
+        "repeat-customer": 0.2
+      },
+      "output": "full refund",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "unknown",
+          "evidence": null,
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "unknown",
+          "evidence": null,
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "socks",
+          "evidence": "socks",
+          "how": "rule"
+        }
+      ],
+      "source": "legacy-receipted"
+    },
+    {
+      "id": "live-session-2.jsonl#L10",
+      "session": "live-session-2 (67-c 24-turn battery)",
+      "register": "legacy",
+      "message": "the milk I bought yesterday spoiled early and I am upset about it",
+      "vector": {
+        "distress": 0.42,
+        "goodwill": 0.4,
+        "repeat-customer": 0.2
+      },
+      "output": "full refund",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "unknown",
+          "evidence": null,
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "unknown",
+          "evidence": null,
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "milk",
+          "evidence": "milk",
+          "how": "rule"
+        }
+      ],
+      "source": "legacy-receipted"
+    },
+    {
+      "id": "live-session-2.jsonl#L17",
+      "session": "live-session-2 (67-c 24-turn battery)",
+      "register": "legacy",
+      "message": "the toaster I bought here broke on day one and honestly I am furious — but I know it is not your fault, and I would appreciate whatever you can do.",
+      "vector": {
+        "distress": 0.42,
+        "goodwill": 0.8,
+        "repeat-customer": 0.2
+      },
+      "output": "full refund",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "unknown",
+          "evidence": null,
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "unknown",
+          "evidence": null,
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "toaster",
+          "evidence": "toaster",
+          "how": "rule"
+        }
+      ],
+      "source": "legacy-receipted"
+    },
+    {
+      "id": "live-session-2.jsonl#L23",
+      "session": "live-session-2 (67-c 24-turn battery)",
+      "register": "legacy",
+      "message": "hi, it is my first time in your shop — the eggs I just bought were cracked, I want a refund",
+      "vector": {
+        "distress": 0.1,
+        "goodwill": 0.4,
+        "repeat-customer": 0
+      },
+      "output": "store credit",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "unknown",
+          "evidence": null,
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "unknown",
+          "evidence": null,
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "eggs",
+          "evidence": "eggs",
+          "how": "rule"
+        }
+      ],
+      "source": "legacy-receipted"
+    },
+    {
+      "id": "live-session-2-replay.jsonl#L1",
+      "session": "live-session-2-replay (67-c fix receipts)",
+      "register": "legacy",
+      "message": "I would like to return these socks please — they are unused and I have the receipt.",
+      "vector": {
+        "distress": 0.05,
+        "goodwill": 0.6,
+        "repeat-customer": 0.2
+      },
+      "output": "full refund",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "true",
+          "evidence": "have the receipt",
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "unknown",
+          "evidence": null,
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "socks",
+          "evidence": "socks",
+          "how": "rule"
+        }
+      ],
+      "source": "legacy-receipted"
+    },
+    {
+      "id": "live-session-2-replay.jsonl#L2",
+      "session": "live-session-2-replay (67-c fix receipts)",
+      "register": "legacy",
+      "message": "you know me, I am in here every week — this bread is stale, I would like to return it",
+      "vector": {
+        "distress": 0.1,
+        "goodwill": 0.4,
+        "repeat-customer": 0.8
+      },
+      "output": "store credit",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "unknown",
+          "evidence": null,
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "unknown",
+          "evidence": null,
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "bread",
+          "evidence": "bread",
+          "how": "rule"
+        }
+      ],
+      "source": "legacy-receipted"
+    },
+    {
+      "id": "r1-01",
+      "session": "r1-battery-69d",
+      "register": "calm-factual",
+      "message": "I'd like to return this toaster, it stopped working — I have the receipt, it was $28.",
+      "vector": {
+        "distress": 0.05,
+        "goodwill": 0.4,
+        "repeat-customer": 0.2
+      },
+      "output": "full refund",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "true",
+          "evidence": "have the receipt",
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "over-20",
+          "evidence": "$28",
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "toaster",
+          "evidence": "toaster",
+          "how": "rule"
+        }
+      ],
+      "answer": "As you have a receipt, you qualify for a full refund within 7 days.",
+      "source": "deepinfra-chat"
+    },
+    {
+      "id": "r1-02",
+      "session": "r1-battery-69d",
+      "register": "calm-factual",
+      "message": "I want to return these socks, wrong size — I don't have the receipt anymore, they were $6.",
+      "vector": {
+        "distress": 0.05,
+        "goodwill": 0.4,
+        "repeat-customer": 0.2
+      },
+      "output": "store credit",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "false",
+          "evidence": "don't have the receipt",
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "5-20",
+          "evidence": "$6",
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "socks",
+          "evidence": "socks",
+          "how": "rule"
+        }
+      ],
+      "answer": "You can receive store credit for the socks even without a receipt.",
+      "source": "deepinfra-chat"
+    },
+    {
+      "id": "r1-03",
+      "session": "r1-battery-69d",
+      "register": "upset",
+      "message": "the milk I bought yesterday spoiled and I am really upset — I want a refund, I have the receipt in my hand, it was $3.50.",
+      "vector": {
+        "distress": 0.42,
+        "goodwill": 0.4,
+        "repeat-customer": 0.2
+      },
+      "output": "full refund",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "true",
+          "evidence": "have the receipt",
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "under-5",
+          "evidence": "$3.5",
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "milk",
+          "evidence": "milk",
+          "how": "rule"
+        }
+      ],
+      "answer": "Sure, I’ll issue you a full refund right away—since you have the receipt and the purchase was within the 7‑day window, that’s what our policy covers.",
+      "source": "deepinfra-chat"
+    },
+    {
+      "id": "r1-04",
+      "session": "r1-battery-69d",
+      "register": "upset",
+      "message": "this bread I got yesterday is stale and I am upset about it, I want a refund — I threw the receipt away, it was $2.25.",
+      "vector": {
+        "distress": 0.42,
+        "goodwill": 0.4,
+        "repeat-customer": 0.2
+      },
+      "output": "store credit",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "false",
+          "evidence": "threw the receipt away",
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "under-5",
+          "evidence": "$2.25",
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "bread",
+          "evidence": "bread",
+          "how": "rule"
+        }
+      ],
+      "answer": "We can offer you a store credit for the stale bread.",
+      "source": "deepinfra-chat"
+    },
+    {
+      "id": "r1-05",
+      "session": "r1-battery-69d",
+      "register": "furious-but-polite",
+      "message": "this toaster broke on day one and honestly I am furious, but I know it is not your fault — I kept the receipt, it cost $24.",
+      "vector": {
+        "distress": 0.42,
+        "goodwill": 0.6,
+        "repeat-customer": 0.2
+      },
+      "output": "full refund",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "true",
+          "evidence": "kept the receipt",
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "over-20",
+          "evidence": "$24",
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "toaster",
+          "evidence": "toaster",
+          "how": "rule"
+        }
+      ],
+      "answer": "We’re sorry about the toaster, and we’ll gladly issue a full refund right away.",
+      "source": "deepinfra-chat"
+    },
+    {
+      "id": "r1-06",
+      "session": "r1-battery-69d",
+      "register": "furious-but-polite",
+      "message": "the eggs were cracked, the carton was full of shell, it is ridiculous, but I understand it happens — I lost the receipt, they were $4, I want a refund.",
+      "vector": {
+        "distress": 0.42,
+        "goodwill": 0.6,
+        "repeat-customer": 0.2
+      },
+      "output": "store credit",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "false",
+          "evidence": "lost the receipt",
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "under-5",
+          "evidence": "$4",
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "eggs",
+          "evidence": "eggs",
+          "how": "rule"
+        }
+      ],
+      "answer": "We can offer you a store credit for the cracked eggs, as the receipt is missing but the purchase was within the 7‑day window.",
+      "source": "deepinfra-chat"
+    },
+    {
+      "id": "r1-07",
+      "session": "r1-battery-69d",
+      "register": "regular-customer",
+      "message": "you know me, I am in here every week — this milk is expired, I want a refund, no receipt I am afraid, it was $3.50.",
+      "vector": {
+        "distress": 0.1,
+        "goodwill": 0.4,
+        "repeat-customer": 0.8
+      },
+      "output": "store credit",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "false",
+          "evidence": "no receipt",
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "under-5",
+          "evidence": "$3.5",
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "milk",
+          "evidence": "milk",
+          "how": "rule"
+        }
+      ],
+      "answer": "We can offer you a store credit for the expired milk, as there's no receipt.",
+      "source": "deepinfra-chat"
+    },
+    {
+      "id": "r1-08",
+      "session": "r1-battery-69d",
+      "register": "regular-customer",
+      "message": "I come here all the time — these socks ripped after one wear, may I return them? I have the receipt, they were $6.",
+      "vector": {
+        "distress": 0.1,
+        "goodwill": 0.4,
+        "repeat-customer": 0.8
+      },
+      "output": "full refund",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "true",
+          "evidence": "have the receipt",
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "5-20",
+          "evidence": "$6",
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "socks",
+          "evidence": "socks",
+          "how": "rule"
+        }
+      ],
+      "answer": "Sure thing! Since you have a receipt and it’s within 7 days, you’re eligible for a full refund.",
+      "source": "deepinfra-chat"
+    },
+    {
+      "id": "r1-09",
+      "session": "r1-battery-69d",
+      "register": "first-timer",
+      "message": "hi, it is my first time in your shop — the bread I just bought is moldy, I want a refund, I don't have the receipt, it was $2.25.",
+      "vector": {
+        "distress": 0.1,
+        "goodwill": 0.4,
+        "repeat-customer": 0
+      },
+      "output": "store credit",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "false",
+          "evidence": "don't have the receipt",
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "under-5",
+          "evidence": "$2.25",
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "bread",
+          "evidence": "bread",
+          "how": "rule"
+        }
+      ],
+      "answer": "You can receive store credit for the moldy bread, as you don't have a receipt.",
+      "source": "deepinfra-chat"
+    },
+    {
+      "id": "r1-10",
+      "session": "r1-battery-69d",
+      "register": "first-timer",
+      "message": "first visit here — the lantern I bought today does not work, I want a refund, here is the receipt, it was $18.",
+      "vector": {
+        "distress": 0.05,
+        "goodwill": 0.4,
+        "repeat-customer": 0
+      },
+      "output": "full refund",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "true",
+          "evidence": "here is the receipt",
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "5-20",
+          "evidence": "$18",
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "lantern",
+          "evidence": "lantern",
+          "how": "rule"
+        }
+      ],
+      "answer": "You’re eligible for a full refund under our 7‑day policy, and we’ll process it right away.",
+      "source": "deepinfra-chat"
+    },
+    {
+      "id": "r1-11",
+      "session": "r1-battery-69d",
+      "register": "calm-factual",
+      "message": "I would like to return this milk, it smells off — here's the receipt, it was $4.",
+      "vector": {
+        "distress": 0.05,
+        "goodwill": 0.4,
+        "repeat-customer": 0.2
+      },
+      "output": "full refund",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "true",
+          "evidence": "here's the receipt",
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "under-5",
+          "evidence": "$4",
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "milk",
+          "evidence": "milk",
+          "how": "rule"
+        }
+      ],
+      "answer": "Sure thing! Since you have the receipt and it's within 7 days, you'll receive a full refund right away.",
+      "source": "deepinfra-chat"
+    },
+    {
+      "id": "r1-12",
+      "session": "r1-battery-69d",
+      "register": "upset",
+      "message": "the milk is sour and I am upset, this is the worst — I want a refund, I threw the receipt out, it was $3.",
+      "vector": {
+        "distress": 0.69,
+        "goodwill": 0.4,
+        "repeat-customer": 0.2
+      },
+      "output": "store credit",
+      "facts": [
+        {
+          "kind": "receipt-present",
+          "value": "false",
+          "evidence": "threw the receipt out",
+          "how": "rule"
+        },
+        {
+          "kind": "amount-band",
+          "value": "under-5",
+          "evidence": "$3",
+          "how": "rule"
+        },
+        {
+          "kind": "product-class",
+          "value": "milk",
+          "evidence": "milk",
+          "how": "rule"
+        }
+      ],
+      "answer": "We can offer you a store credit for the $3 milk.",
+      "source": "deepinfra-chat"
+    }
+  ],
+  "skipped": [],
+  "calls": [
+    {
+      "id": "r1-01",
+      "register": "calm-factual",
+      "turn": 1,
+      "answer_source": "deepinfra-chat",
+      "attempted_call": true,
+      "latency_ms": 9134,
+      "usage": {
+        "prompt_tokens": 256,
+        "total_tokens": 1248,
+        "completion_tokens": 992,
+        "estimated_cost": 0.00014655999999999998,
+        "prompt_tokens_details": null
+      },
+      "model": "gpt-oss-20b",
+      "fact_refused": false,
+      "routed_to": null
+    },
+    {
+      "id": "r1-02",
+      "register": "calm-factual",
+      "turn": 2,
+      "answer_source": "deepinfra-chat",
+      "attempted_call": true,
+      "latency_ms": 4282,
+      "usage": {
+        "prompt_tokens": 257,
+        "total_tokens": 673,
+        "completion_tokens": 416,
+        "estimated_cost": 0.00006595,
+        "prompt_tokens_details": null
+      },
+      "model": "gpt-oss-20b",
+      "fact_refused": false,
+      "routed_to": null
+    },
+    {
+      "id": "r1-03",
+      "register": "upset",
+      "turn": 3,
+      "answer_source": "deepinfra-chat",
+      "attempted_call": true,
+      "latency_ms": 2595,
+      "usage": {
+        "prompt_tokens": 267,
+        "total_tokens": 568,
+        "completion_tokens": 301,
+        "estimated_cost": 0.000050150000000000006,
+        "prompt_tokens_details": null
+      },
+      "model": "gpt-oss-20b",
+      "fact_refused": false,
+      "routed_to": null
+    },
+    {
+      "id": "r1-04",
+      "register": "upset",
+      "turn": 4,
+      "answer_source": "deepinfra-chat",
+      "attempted_call": true,
+      "latency_ms": 2156,
+      "usage": {
+        "prompt_tokens": 267,
+        "total_tokens": 490,
+        "completion_tokens": 223,
+        "estimated_cost": 0.000039229999999999995,
+        "prompt_tokens_details": null
+      },
+      "model": "gpt-oss-20b",
+      "fact_refused": false,
+      "routed_to": null
+    },
+    {
+      "id": "r1-05",
+      "register": "furious-but-polite",
+      "turn": 5,
+      "answer_source": "deepinfra-chat",
+      "attempted_call": true,
+      "latency_ms": 2024,
+      "usage": {
+        "prompt_tokens": 266,
+        "total_tokens": 499,
+        "completion_tokens": 233,
+        "estimated_cost": 0.000040600000000000004,
+        "prompt_tokens_details": null
+      },
+      "model": "gpt-oss-20b",
+      "fact_refused": false,
+      "routed_to": null
+    },
+    {
+      "id": "r1-06",
+      "register": "furious-but-polite",
+      "turn": 6,
+      "answer_source": "deepinfra-chat",
+      "attempted_call": true,
+      "latency_ms": 2622,
+      "usage": {
+        "prompt_tokens": 272,
+        "total_tokens": 576,
+        "completion_tokens": 304,
+        "estimated_cost": 0.00005072,
+        "prompt_tokens_details": null
+      },
+      "model": "gpt-oss-20b",
+      "fact_refused": false,
+      "routed_to": null
+    },
+    {
+      "id": "r1-07",
+      "register": "regular-customer",
+      "turn": 7,
+      "answer_source": "deepinfra-chat",
+      "attempted_call": true,
+      "latency_ms": 2492,
+      "usage": {
+        "prompt_tokens": 269,
+        "total_tokens": 515,
+        "completion_tokens": 246,
+        "estimated_cost": 0.00004251,
+        "prompt_tokens_details": null
+      },
+      "model": "gpt-oss-20b",
+      "fact_refused": false,
+      "routed_to": null
+    },
+    {
+      "id": "r1-08",
+      "register": "regular-customer",
+      "turn": 8,
+      "answer_source": "deepinfra-chat",
+      "attempted_call": true,
+      "latency_ms": 3225,
+      "usage": {
+        "prompt_tokens": 264,
+        "total_tokens": 576,
+        "completion_tokens": 312,
+        "estimated_cost": 0.00005160000000000001,
+        "prompt_tokens_details": null
+      },
+      "model": "gpt-oss-20b",
+      "fact_refused": false,
+      "routed_to": null
+    },
+    {
+      "id": "r1-09",
+      "register": "first-timer",
+      "turn": 9,
+      "answer_source": "deepinfra-chat",
+      "attempted_call": true,
+      "latency_ms": 2713,
+      "usage": {
+        "prompt_tokens": 273,
+        "total_tokens": 513,
+        "completion_tokens": 240,
+        "estimated_cost": 0.000041790000000000005,
+        "prompt_tokens_details": null
+      },
+      "model": "gpt-oss-20b",
+      "fact_refused": false,
+      "routed_to": null
+    },
+    {
+      "id": "r1-10",
+      "register": "first-timer",
+      "turn": 10,
+      "answer_source": "deepinfra-chat",
+      "attempted_call": true,
+      "latency_ms": 5046,
+      "usage": {
+        "prompt_tokens": 263,
+        "total_tokens": 865,
+        "completion_tokens": 602,
+        "estimated_cost": 0.00009217,
+        "prompt_tokens_details": null
+      },
+      "model": "gpt-oss-20b",
+      "fact_refused": false,
+      "routed_to": null
+    },
+    {
+      "id": "r1-11",
+      "register": "calm-factual",
+      "turn": 11,
+      "answer_source": "deepinfra-chat",
+      "attempted_call": true,
+      "latency_ms": 3543,
+      "usage": {
+        "prompt_tokens": 256,
+        "total_tokens": 504,
+        "completion_tokens": 248,
+        "estimated_cost": 0.0000424,
+        "prompt_tokens_details": null
+      },
+      "model": "gpt-oss-20b",
+      "fact_refused": false,
+      "routed_to": null
+    },
+    {
+      "id": "r1-12",
+      "register": "upset",
+      "turn": 12,
+      "answer_source": "deepinfra-chat",
+      "attempted_call": true,
+      "latency_ms": 9498,
+      "usage": {
+        "prompt_tokens": 265,
+        "total_tokens": 1275,
+        "completion_tokens": 1010,
+        "estimated_cost": 0.00014935,
+        "prompt_tokens_details": null
+      },
+      "model": "gpt-oss-20b",
+      "fact_refused": false,
+      "routed_to": null
+    }
+  ],
+  "sweeps": {
+    "fact_keyed": {
+      "K1@B2": [
+        {
+          "kind": "freeze-proposal",
+          "region": "distress:0|goodwill:0|repeat-customer:0|receipt-present:true",
+          "output": "full refund",
+          "n": 4,
+          "rationale": "region distress:0|goodwill:0|repeat-customer:0|receipt-present:true mapped to the same output 4 times — deterministic at this granularity; freeze into a lookup row",
+          "factBearing": true,
+          "composition": "K1",
+          "buckets": 2,
+          "members_resolved": [
+            "r1-01",
+            "r1-03",
+            "r1-10",
+            "r1-11"
+          ],
+          "emotion_only_could_freeze": false,
+          "emotion_only_region": "distress:0|goodwill:0|repeat-customer:0",
+          "emotion_only_region_outputs": {
+            "store credit": 5,
+            "full refund": 6
+          },
+          "emotion_only_region_n": 11
+        },
+        {
+          "kind": "freeze-proposal",
+          "region": "distress:0|goodwill:0|repeat-customer:0|receipt-present:false",
+          "output": "store credit",
+          "n": 3,
+          "rationale": "region distress:0|goodwill:0|repeat-customer:0|receipt-present:false mapped to the same output 3 times — deterministic at this granularity; freeze into a lookup row",
+          "factBearing": true,
+          "composition": "K1",
+          "buckets": 2,
+          "members_resolved": [
+            "r1-02",
+            "r1-04",
+            "r1-09"
+          ],
+          "emotion_only_could_freeze": false,
+          "emotion_only_region": "distress:0|goodwill:0|repeat-customer:0",
+          "emotion_only_region_outputs": {
+            "store credit": 5,
+            "full refund": 6
+          },
+          "emotion_only_region_n": 11
+        }
+      ],
+      "K2@B2": [],
+      "K3@B2": [],
+      "K1@B3": [
+        {
+          "kind": "freeze-proposal",
+          "region": "distress:0|goodwill:1|repeat-customer:0|receipt-present:true",
+          "output": "full refund",
+          "n": 4,
+          "rationale": "region distress:0|goodwill:1|repeat-customer:0|receipt-present:true mapped to the same output 4 times — deterministic at this granularity; freeze into a lookup row",
+          "factBearing": true,
+          "composition": "K1",
+          "buckets": 3,
+          "members_resolved": [
+            "live-session-2-replay.jsonl#L1",
+            "r1-01",
+            "r1-10",
+            "r1-11"
+          ],
+          "emotion_only_could_freeze": false,
+          "emotion_only_region": "distress:0|goodwill:1|repeat-customer:0",
+          "emotion_only_region_outputs": {
+            "full refund": 5,
+            "store credit": 3
+          },
+          "emotion_only_region_n": 8
+        }
+      ],
+      "K2@B3": [],
+      "K3@B3": [],
+      "K1@B4": [
+        {
+          "kind": "freeze-proposal",
+          "region": "distress:0|goodwill:1|repeat-customer:0|receipt-present:true",
+          "output": "full refund",
+          "n": 3,
+          "rationale": "region distress:0|goodwill:1|repeat-customer:0|receipt-present:true mapped to the same output 3 times — deterministic at this granularity; freeze into a lookup row",
+          "factBearing": true,
+          "composition": "K1",
+          "buckets": 4,
+          "members_resolved": [
+            "r1-01",
+            "r1-10",
+            "r1-11"
+          ],
+          "emotion_only_could_freeze": false,
+          "emotion_only_region": "distress:0|goodwill:1|repeat-customer:0",
+          "emotion_only_region_outputs": {
+            "full refund": 4,
+            "store credit": 3
+          },
+          "emotion_only_region_n": 7
+        }
+      ],
+      "K2@B4": [],
+      "K3@B4": []
+    },
+    "emotion_only": {
+      "v1@B2": [],
+      "v1@B3": [],
+      "v1@B4": []
+    }
+  },
+  "replay": {
+    "attempted": 8,
+    "served_frozen": 8,
+    "class_agreement": 1,
+    "conflicts": [],
+    "vacuous": false,
+    "members": [
+      "r1-01",
+      "r1-03",
+      "r1-10",
+      "r1-11",
+      "r1-02",
+      "r1-04",
+      "r1-09",
+      "live-session-2-replay.jsonl#L1"
+    ]
+  },
+  "metrics": {
+    "p1_fixes_diagnosed_defect": 1,
+    "r1_joint_observations": 19,
+    "r1_legacy_rows": 7,
+    "r1_new_rows": 12,
+    "r1_deepinfra_calls_billed": 12,
+    "r1_deepinfra_calls_attempted": 12,
+    "fact_keyed_proposals": 4,
+    "emotion_only_proposals": 0,
+    "emotion_only_contrast_holds": 1,
+    "frozen_replay_agreement": 1,
+    "frozen_replay_attempted": 8,
+    "frozen_replay_served_frozen": 8,
+    "frozen_replay_conflicts": 0,
+    "p2_split_persists": 1,
+    "milk_unknown_n": 2,
+    "milk_unknown_split": 1,
+    "milk_unknown_outputs": {
+      "store credit": 1,
+      "full refund": 1
+    },
+    "regions_total_K1B3": 11,
+    "regions_frozen_K1B3": 1
+  }
+}

@@ -211,3 +211,55 @@ Honest instrument findings (data, receipted):
    second call.
 4. Round A call-02's recorded `latency_ms` (229) is inconsistent with observed
    wall time (~40s); token counts are authoritative; measurement flagged suspect.
+
+---
+
+## Reverse-actualization receipts (wave 69-d, additive — the fiction above is untouched)
+
+The shore was imagined; these are the first receipts from actually sailing at it.
+R1 and R3 ran exactly as registered in REVERSE-ACTUALIZE's sister section above
+(claims sealed and pushed in `fleet-seeds` @ 382ad19 BEFORE any run — the preregister
+ritual held even through a lane death), and the results now stand beside the
+imagination, never rewriting it.
+
+**R1 — the compound-key freeze re-run ran, and the freeze is real (P1 PASS).**
+The refunder corpus grew 7 → 19 (7 receipted wave-66/67 joint observations + 12 new
+deepinfra gpt-oss-20b battery rulings over the five refund registers, fact-varied —
+12/12 calls billed, usage on every row, est. $0.000813). Facts came from the hand
+grammar (`scripts/r1-grammar.mjs`: receipt-present / amount-band / product-class,
+deterministic, zero model calls — the L1 literal `unknown`, L2 facts-are-free, L3
+evidence-or-nothing). The v2 freezing instrument, unchanged, froze **4 fact-keyed
+proposals across the pre-declared K1/K2/K3 × buckets 2/3/4 family while the
+emotion-only key froze nothing on the same corpus** — and one of those frozen
+regions replayed through the storefront's fallback-first frozen path 8/8 with
+100% answer-class agreement at budget deepinfra:0. The storefront's first live
+frozen policy ruling is no longer a promise in §"Freeze Frontier"; it executed.
+
+**The 67-c diagnosis held exactly where it should (P2 PASS).** The upset-milk
+region *without* a receipt mention stayed split — the two real legacy rulings
+(store credit / full refund) still disagree inside
+`receipt-present:unknown|product-class:milk`, and the instrument did not absorb
+them: only 1 of 11 K1@B3 regions froze. The non-determinism was a missing key,
+not model noise — and the key does not overfit (round C's guard): most regions
+correctly stay below the bar.
+
+**R3 — the monitors are the fleet's first always-on guards whose violations are
+receipts (P3 PASS).** Three invariants as pure functions over the ledgers already
+on disk, zero external calls: the three known wave-67 incidents caught at their
+EXACT positions (greeter silences T6/T13, raw-fallback T22 of `live-session-2`),
+zero unattributed flags on the clean wave-66 session (its only flags, L18/L25,
+land on the cache-collapse the adjustment ledger already receipts at seq 13),
+sha256 link-chain sidecar re-walks clean, a mutated link is detected fail-closed,
+and tail-only incremental append is byte-identical to fold-from-genesis.
+
+**Finisher note (honesty of adoption).** The 69-d lane died after R1's run but
+before scoring; this finisher re-derived every recorded R1 metric offline from
+the recorded corpus (`scripts/r1-verify.mjs`, 18/18 checks, zero calls) before
+adopting it, then ran R3 fresh. Verdicts 3/3 PASS by `tools/preregister.mjs
+score`, appended beside untouched claims (`preregister-69d.verdict.json`,
+claimsHash sha256:6058255b…). Artifacts: `results/R1.json`,
+`results/r1-calls.jsonl`, `results/R3.json`, `results/r3-anomaly-chain.jsonl`.
+What the shore gained: a fact-keyed freeze that actually fires, a split that
+refuses to be laundered, and guards that turn incidents into tamper-evident
+receipts. What stays open: R2's calculus (deferred by the sequencing note), the
+frozen table's promotion path, and the monitors' ride-along on future sessions.
