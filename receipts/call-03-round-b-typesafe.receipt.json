@@ -1,0 +1,15 @@
+{
+  "round": "b",
+  "channel": "typesafe-systemone",
+  "model": "jev-1.13.0",
+  "http": 200,
+  "ok": true,
+  "latency_ms": 351,
+  "questions": 31,
+  "usage": {
+    "input_tokens": 7172,
+    "output_tokens": 578
+  },
+  "keys_printed": false,
+  "note": "scores are data; lane computes the product. Verbatim in receipts/round-b-jev.answer.md"
+}

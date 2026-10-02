@@ -1,0 +1,100 @@
+{
+  "top_pick": {
+    "type": "choice",
+    "choice": "p3",
+    "confidence": 0.86,
+    "probabilities": {
+      "p7": 0.02,
+      "p2": 0,
+      "p4": 0.01,
+      "p3": 0.88,
+      "_provenance": 0,
+      "p5": 0,
+      "p1": 0.02,
+      "p6": 0.05,
+      "p8": 0,
+      "p9": 0.02
+    }
+  },
+  "rows": [
+    {
+      "id": "p1",
+      "name": "Flow Calculus",
+      "lev": 1.87,
+      "bld": 1.86,
+      "lkp": 1.73,
+      "product": 3.478
+    },
+    {
+      "id": "p6",
+      "name": "Invariant Monitor",
+      "lev": 1.46,
+      "bld": 1.9,
+      "lkp": 1.8,
+      "product": 2.774
+    },
+    {
+      "id": "p3",
+      "name": "Evidence Key",
+      "lev": 1.64,
+      "bld": 1.61,
+      "lkp": 1.38,
+      "product": 2.64
+    },
+    {
+      "id": "p9",
+      "name": "Freeze Frontier",
+      "lev": 1.43,
+      "bld": 1.72,
+      "lkp": 1.93,
+      "product": 2.46
+    },
+    {
+      "id": "p2",
+      "name": "Moment Field",
+      "lev": 1.5,
+      "bld": 1.62,
+      "lkp": 1.26,
+      "product": 2.43
+    },
+    {
+      "id": "p5",
+      "name": "Causal Slice",
+      "lev": 1.58,
+      "bld": 1.52,
+      "lkp": 1.66,
+      "product": 2.402
+    },
+    {
+      "id": "p8",
+      "name": "Domain Skeleton Compiler",
+      "lev": 1.61,
+      "bld": 1.49,
+      "lkp": 1.38,
+      "product": 2.399
+    },
+    {
+      "id": "p7",
+      "name": "Metered Soft Joint",
+      "lev": 1.22,
+      "bld": 1.89,
+      "lkp": 1.55,
+      "product": 2.306
+    },
+    {
+      "id": "p4",
+      "name": "Greeter Contract",
+      "lev": 1.19,
+      "bld": 1.93,
+      "lkp": 1.42,
+      "product": 2.297
+    },
+    {
+      "id": "_provenance",
+      "lev": 0.9,
+      "bld": 1.37,
+      "lkp": 1.44,
+      "product": 1.233
+    }
+  ]
+}

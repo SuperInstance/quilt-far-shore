@@ -1,0 +1,12 @@
+{
+  "name": "quilt-far-shore",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lane 68-c ideation: imagine the 2028 soft-joint quilt runtime, reverse-actualize it into machine-usable specs and smallest-honest experiments. Design repo: docs + validated spec examples + receipted ideation calls.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "keyscan": "node scripts/keyscan.mjs"
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,84 @@
+{
+  "_provenance": "Candidate corpus for lane 68-c rounds B/C. Round A (deepseek-v4-pro, receipts/call-02-round-a-deepseek.receipt.json) hit its completion-token cap (finish=length: 5789 reasoning + 211 visible tokens) after formatting 1.5 of its 9 planned primitives. The full plan was mined VERBATIM from the same receipted call's reasoning_content (receipts/round-a-deepseek.reasoning.md) and grammaticized minimally by lane 68-c; every definition below is the model's own wording from that trace, lightly edited for sentence form. Source field records origin per primitive. Judges advise; ledgers decide.",
+  "p1": {
+    "name": "Flow Calculus",
+    "handle": "time-as-operator toolkit",
+    "definition": "A registered set of operations over quilt-chrono ledgers — diff(cell, dimension, window), integrate(flow, t1, t2), lag(a, b) — computed as pure reductions over append-only flow entries. Each operation emits a new DERIVED cell whose value is the integral/derivative quantity, not a stored event.",
+    "unlocks": "Operators gain warmth velocity and accumulated urgency as first-class objects, like d/dt made rate-of-change an object; they can intervene on acceleration or accumulated drift, not just thresholds.",
+    "grows_from": "quilt-chrono src/projection.js; the delta is from point-in-time views to closed derivative/integral/lead-lag operators over the time dimension.",
+    "failure_mode": "Naive discrete differencing amplifies ledger jitter and late-arriving entries; a derivative cell oscillates under small write noise and triggers false interventions.",
+    "source": "deepseek-v4-pro final answer (complete)"
+  },
+  "p2": {
+    "name": "Moment Field",
+    "handle": "continuous vector array",
+    "definition": "Interpolation over the named moment dimensions with gradients: from bucketed vector regions to a field the soft joints query continuously. Operators can compute policy gradients over a dimension (how a ruling changes as urgency moves), and the freezing test can promote continuous regions instead of only buckets.",
+    "unlocks": "The policy gradient as an object; freezing decisions on the shape of the field rather than the luck of bucket boundaries.",
+    "grows_from": "quilt-softjoints src/joint.js vector regions + quilt-storefront src/vector.js DIMS; delta: buckets -> field with interpolation and gradients.",
+    "failure_mode": "Without interpolation boundaries a continuous field selects too many or too few observations; gradients over sparse regions confabulate structure from noise.",
+    "source": "deepseek-v4-pro (final answer truncated mid-primitive; completed from its reasoning trace)"
+  },
+  "p3": {
+    "name": "Evidence Key",
+    "handle": "fact/emotion splitting",
+    "definition": "A deterministic, typed FACT projection carried alongside the emotional moment vector. Outcome branches (what happened) require evidence dimensions — receipt presence, amount, date; the emotional vector decides tone only. Region keys become compound: (fact-vector, tone-vector).",
+    "unlocks": "The storefront's freeze diagnosis becomes executable: facts decide outcomes, emotion decides tone; policy rulings become freezable because the region key can finally SEE the deciding feature.",
+    "grows_from": "quilt-storefront src/freeze.js + src/vector.js + the 67-c non-result (runs/adjustments.jsonl seq 18 v2-vector proposal); delta: emotion-only pre-vector -> compound fact+tone key.",
+    "failure_mode": "Fact extraction reintroduces a model call at freeze time (the thing freezing was meant to remove); naive regex fact keys overfit one domain's receipt vocabulary.",
+    "source": "deepseek-v4-pro reasoning trace"
+  },
+  "p4": {
+    "name": "Greeter Contract",
+    "handle": "sealed human boundary",
+    "definition": "A signed contract marking a cell as deliberately never decomposed: allowed inputs, a non-decomposition decision space, handoff triggers to a human, and a rule that the adjustment->cell compiler and freezing tests treat the cell as forbidden ground.",
+    "unlocks": "Greeter protection stops being a convention in notes fields and becomes an enforceable, auditable boundary the compiler cannot cross.",
+    "grows_from": "quilt-softjoints §5b greeter flag (notes-only today) + quilt-jev-toolkit signed checkpoints; delta: a notes flag -> a signed, enforced contract.",
+    "failure_mode": "Oversealing: the contract forbids the exact compile-time improvements runs legitimately discover; contracts drift from the live cell they protect.",
+    "source": "deepseek-v4-pro reasoning trace"
+  },
+  "p5": {
+    "name": "Causal Slice",
+    "handle": "why-this-output provenance",
+    "definition": "A reconstructed provenance graph from a final decision back to the cells, facts, vectors, and ledger entries that produced it — the minimal replayable set that reproduces the output. Executable trace object, not just logs.",
+    "unlocks": "The debugger's question 'why did this cell fire?' becomes a first-class object you can hold, diff, and seal — like a stack trace that survives rewinds.",
+    "grows_from": "quilt-runbook src/mine.js WHY-mining + quilt-chrono ledger; delta: post-hoc log mining -> an executable slice object with replay guarantees.",
+    "failure_mode": "Slice reconstruction costs O(entire run) without index discipline; slices that include non-deterministic joints reproduce a DIFFERENT output than the one being explained.",
+    "source": "deepseek-v4-pro reasoning trace"
+  },
+  "p6": {
+    "name": "Invariant Monitor",
+    "handle": "projection guards",
+    "definition": "Operators define pure functions over ledger projections that must hold (bool or numeric band); the runtime evaluates them on each flow entry and emits a sealed anomaly cell on violation — continuous assertions as objects, not ad-hoc checks.",
+    "unlocks": "Auditors get runtime-checked invariants ('refunds never exceed receipts', 'greeter never silent for > N turns') instead of post-hoc report reading.",
+    "grows_from": "quilt-chrono src/projection.js pure views + quilt-playtest CellEKG motion classification; delta: offline views -> live guards with sealed anomalies.",
+    "failure_mode": "Invariant spam: noisy monitors cry wolf until operators mute them; a monitor that reads a moving projection freezes a moving target.",
+    "source": "deepseek-v4-pro reasoning trace"
+  },
+  "p7": {
+    "name": "Metered Soft Joint",
+    "handle": "call economics dimension",
+    "definition": "A meter cell per soft joint recording calls, latency, vector coverage, frozen hit rate, and drift; routing and the freeze frontier consult the meter. Call economics becomes a dimension of the sheet, visible and projectable like any other.",
+    "unlocks": "The operator sees cost/latency as a dimension and can throttle soft joints below frozen tables; 'punches above its weights' becomes a measurable curve per joint.",
+    "grows_from": "quilt-storefront budget-remaining + per-call usage receipting (67-c) + quilt-softjoints cache; delta: budget counters -> per-joint meter cells in the ledger.",
+    "failure_mode": "Metering overhead rivals the calls being metered; meters double-count under joint retries and cache hits, so the curve lies.",
+    "source": "deepseek-v4-pro reasoning trace"
+  },
+  "p8": {
+    "name": "Domain Skeleton Compiler",
+    "handle": "greenfield decomposition",
+    "definition": "Feed raw domain traces (logs, transcripts, play-test runs) and get a proposed cell skeleton: deterministic lookup candidates, soft joints with vector labels, greeter candidates, and freeze candidates — a manifest a lane can accept or reject piecewise.",
+    "unlocks": "Composing a NEW domain onto the quilt starts from a compiled draft instead of an empty sheet; decomposition becomes a compiler output, not an art.",
+    "grows_from": "quilt-softjoints src/compiler.js (adjustment->cell) + quilt-lookup classification.json; delta: compiles CORRECTIONS to existing sheets -> compiles INITIAL skeletons for new domains.",
+    "failure_mode": "Greenfield proposals from thin traces freeze superstition; without the freezing test's evidence bar the compiler ships plausible-looking wrong tables.",
+    "source": "deepseek-v4-pro reasoning trace"
+  },
+  "p9": {
+    "name": "Freeze Frontier",
+    "handle": "safe freezing surface",
+    "definition": "A managed decision surface over the moment field: per region, frozen-table / dynamic-joint / greeter, updated ONLY when the freezing test passes on both fact and tone dimensions, with hysteresis so regions flicker between states. The frontier is displayed and controlled like any other projection.",
+    "unlocks": "The grind-down thesis becomes visible and governable: operators see WHERE the quilt is still alive and where it has become lookup, and control the budget dial accordingly.",
+    "grows_from": "quilt-softjoints freezingTest + quilt-storefront fallback-first frozen path (tryFrozen before backend); delta: per-joint binary freeze -> a region-map surface with hysteresis.",
+    "failure_mode": "A frontier that flips regions on thin evidence turns live judgment into stale tables mid-conversation; hysteresis parameters become new tuning hell.",
+    "source": "deepseek-v4-pro reasoning trace"
+  }
+}

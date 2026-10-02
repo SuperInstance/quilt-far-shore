@@ -1,0 +1,25 @@
+{
+  "round": "a",
+  "channel": "deepseek",
+  "model": "deepseek-v4-pro",
+  "http": 200,
+  "ok": true,
+  "latency_ms": 218,
+  "usage": {
+    "prompt_tokens": 1079,
+    "completion_tokens": 3000,
+    "total_tokens": 4079,
+    "prompt_tokens_details": {
+      "cached_tokens": 1024
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3000
+    },
+    "prompt_cache_hit_tokens": 1024,
+    "prompt_cache_miss_tokens": 55
+  },
+  "finish": "length",
+  "keys_printed": false,
+  "note": "verbatim answer in receipts/round-a-deepseek.answer.md; raw wire body in receipts/raw/ (gitignored)",
+  "error": "{\"id\":\"31df37dd-194e-4523-b9f3-0a3626a18290\",\"object\":\"chat.completion\",\"created\":1790922653,\"model\":\"deepseek-v4-pro\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"reasoning_content\":\"We need answer 8-12 primitives exactly shape. Need think deeply. We need design primitives missing for 2028 mature operation. Context: soft-joint quilt, existing artifacts. Need new conceptual objects operators live inside, like derivatives/integrals. Need primitives not built. Need concrete me"
+}

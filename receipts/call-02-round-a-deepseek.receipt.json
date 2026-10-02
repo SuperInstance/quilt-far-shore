@@ -1,0 +1,24 @@
+{
+  "round": "a",
+  "channel": "deepseek",
+  "model": "deepseek-v4-pro",
+  "http": 200,
+  "ok": true,
+  "latency_ms": 229,
+  "usage": {
+    "prompt_tokens": 1079,
+    "completion_tokens": 6000,
+    "total_tokens": 7079,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5789
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1079
+  },
+  "finish": "length",
+  "keys_printed": false,
+  "note": "verbatim answer in receipts/round-a-deepseek.answer.md; raw wire body in receipts/raw/ (gitignored)"
+}

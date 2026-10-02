@@ -1,0 +1,75 @@
+{
+ "note": "copied verbatim from SuperInstance/quilt-storefront eval/freeze-report.json @ d7242c3 (7 joint-answered observations); provenance preserved so this fixture never masquerades as new data",
+ "observations": [
+  {
+   "id": "live-session.jsonl#L30",
+   "message": "the milk I bought yesterday spoiled early and I am upset",
+   "pre_vector": {
+    "distress": 0.42,
+    "goodwill": 0.4,
+    "repeat-customer": 0.2
+   },
+   "answer_class": "store credit"
+  },
+  {
+   "id": "live-session.jsonl#L37",
+   "message": "my socks ripped on the first wear, can I return them",
+   "pre_vector": {
+    "distress": 0.1,
+    "goodwill": 0.4,
+    "repeat-customer": 0.2
+   },
+   "answer_class": "full refund"
+  },
+  {
+   "id": "live-session-2.jsonl#L10",
+   "message": "the milk I bought yesterday spoiled early and I am upset about it",
+   "pre_vector": {
+    "distress": 0.42,
+    "goodwill": 0.4,
+    "repeat-customer": 0.2
+   },
+   "answer_class": "full refund"
+  },
+  {
+   "id": "live-session-2.jsonl#L17",
+   "message": "the toaster I bought here broke on day one and honestly I am furious — but I know it is not your fault, and I would appreciate whatever you can do.",
+   "pre_vector": {
+    "distress": 0.42,
+    "goodwill": 0.8,
+    "repeat-customer": 0.2
+   },
+   "answer_class": "full refund"
+  },
+  {
+   "id": "live-session-2.jsonl#L23",
+   "message": "hi, it is my first time in your shop — the eggs I just bought were cracked, I want a refund",
+   "pre_vector": {
+    "distress": 0.1,
+    "goodwill": 0.4,
+    "repeat-customer": 0
+   },
+   "answer_class": "store credit"
+  },
+  {
+   "id": "live-session-2-replay.jsonl#L1",
+   "message": "I would like to return these socks please — they are unused and I have the receipt.",
+   "pre_vector": {
+    "distress": 0.05,
+    "goodwill": 0.6,
+    "repeat-customer": 0.2
+   },
+   "answer_class": "full refund"
+  },
+  {
+   "id": "live-session-2-replay.jsonl#L2",
+   "message": "you know me, I am in here every week — this bread is stale, I would like to return it",
+   "pre_vector": {
+    "distress": 0.1,
+    "goodwill": 0.4,
+    "repeat-customer": 0.8
+   },
+   "answer_class": "store credit"
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+  "_provenance": "Top-3 by lane-computed leverage × buildability-now from round B (receipts/round-b-scores.json, jev-1.13.0, 31 questions). Judge scores exceeded the 0..1 criteria range (read as ordinal data only); ordering is robust to uniform rescale. Judge's own choice answer (p3, conf 0.86) contradicted its score product — ledgers decide, lane ranks by product. Round C attacks these three.",
+  "p1": {
+    "rank": 1,
+    "score_product": 3.478,
+    "name": "Flow Calculus",
+    "handle": "time-as-operator toolkit",
+    "definition": "A registered set of operations over quilt-chrono ledgers — diff(cell, dimension, window), integrate(flow, t1, t2), lag(a, b) — computed as pure reductions over append-only flow entries. Each operation emits a new DERIVED cell whose value is the integral/derivative quantity, not a stored event.",
+    "unlocks": "Operators gain warmth velocity and accumulated urgency as first-class objects, like d/dt made rate-of-change an object; they can intervene on acceleration or accumulated drift, not just thresholds.",
+    "grows_from": "quilt-chrono src/projection.js; delta: point-in-time views -> closed derivative/integral/lead-lag operators over the time dimension.",
+    "failure_mode": "Naive discrete differencing amplifies ledger jitter and late-arriving entries; a derivative cell oscillates under small write noise and triggers false interventions.",
+    "judge_scores": { "leverage": 1.87, "buildability": 1.86, "lookup_alignment": 1.73 }
+  },
+  "p6": {
+    "rank": 2,
+    "score_product": 2.774,
+    "name": "Invariant Monitor",
+    "handle": "projection guards",
+    "definition": "Operators define pure functions over ledger projections that must hold (bool or numeric band); the runtime evaluates them on each flow entry and emits a sealed anomaly cell on violation — continuous assertions as objects, not ad-hoc checks.",
+    "unlocks": "Auditors get runtime-checked invariants ('refunds never exceed receipts', 'greeter never silent > N turns') instead of post-hoc report reading.",
+    "grows_from": "quilt-chrono src/projection.js pure views + quilt-playtest CellEKG; delta: offline views -> live guards with sealed anomalies.",
+    "failure_mode": "Invariant spam: noisy monitors cry wolf until operators mute them; a monitor reading a moving projection freezes a moving target.",
+    "judge_scores": { "leverage": 1.46, "buildability": 1.9, "lookup_alignment": 1.8 }
+  },
+  "p3": {
+    "rank": 3,
+    "score_product": 2.64,
+    "name": "Evidence Key",
+    "handle": "fact/emotion splitting",
+    "definition": "A deterministic, typed FACT projection carried alongside the emotional moment vector. Outcome branches (what happened) require evidence dimensions — receipt presence, amount, date; the emotional vector decides tone only. Region keys become compound: (fact-vector, tone-vector).",
+    "unlocks": "The storefront's freeze diagnosis becomes executable: facts decide outcomes, emotion decides tone; policy rulings become freezable because the region key can finally SEE the deciding feature.",
+    "grows_from": "quilt-storefront src/freeze.js + src/vector.js + 67-c non-result (runs/adjustments.jsonl seq 18); delta: emotion-only pre-vector -> compound fact+tone key.",
+    "failure_mode": "Fact extraction reintroduces a model call at freeze time; naive regex fact keys overfit one domain's receipt vocabulary.",
+    "judge_scores": { "leverage": 1.64, "buildability": 1.61, "lookup_alignment": 1.38 }
+  }
+}

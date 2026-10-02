@@ -1,0 +1,38 @@
+{
+ "lane": "68-c",
+ "repo": "SuperInstance/quilt-far-shore",
+ "generated_at": "2026-10-02T07:20:00Z",
+ "note": "external-call totals for lane 68-c (ideation). Every call's per-call receipt lives in receipts/call-*.receipt.json; verbatim model answers in receipts/round-*.answer.md (+ round-a reasoning trace). No keys are ever receipted.",
+ "budgets": {
+  "task_cap": {"typesafe": 4, "deepinfra": 6, "deepseek_deepseek-v4-pro": 2},
+  "brief_cap": {"typesafe": 6, "deepinfra": 30, "deepseek": 6}
+ },
+ "calls": {
+  "round_a_imagine_2028_primitives": {
+   "channel": "deepseek", "model": "deepseek-v4-pro",
+   "attempted": 3, "receipted": 2,
+   "outcome": "call-01 fail-closed (HTTP 200, finish=length, content EMPTY: all 6000 completion tokens were reasoning; receipted as failure); call-02 finish=length at 6000 completion tokens (5789 reasoning + 211 visible): 1.5 of 9 primitives formatted before truncation; full 9-primitive plan recovered VERBATIM from the same receipted call's reasoning_content (round-a-deepseek.reasoning.md)",
+   "honest_overage_disclosure": "one earlier attempt crashed in the receipt-writer BEFORE receipting (script bug: spend.json read-before-create; fetch had already left the building, ~40s). Fixed in scripts/ideate.mjs; the attempt is disclosed here per the never-hide law, though its response was unrecoverable. Receipted calls = 2 = the task cap; attempts = 3."
+  },
+  "round_b_score_rank_by_leverage_x_buildability": {
+   "channel": "typesafe-systemone", "model": "jev-1.13.0", "calls": 1,
+   "questions": 31, "input_tokens": 7172, "output_tokens": 578, "latency_ms_recorded": 351,
+   "outcome": "scores for 9 primitives x 3 criteria (leverage, buildability-now, lookup-alignment) + top-pick choice; lane-computed product table in round-b-scores.json"
+  },
+  "round_c_devils_advocate_top3": {
+   "channel": "deepinfra", "model": "openai/gpt-oss-20b", "calls": 1,
+   "prompt_tokens": 1386, "completion_tokens": 2182, "total_tokens": 3568, "finish": "stop",
+   "outcome": "BREAK/SNAKE-OIL/FALSIFIER/VERDICT per top-3 primitive: KILL / KILL / MUTATE"
+  }
+ },
+ "totals": {
+  "typesafe_calls": 1, "deepinfra_calls": 1, "deepseek_receipted_calls": 2, "deepseek_attempts": 3,
+  "tokens_in": 9565, "tokens_out": 2760
+ },
+ "honest_notes": [
+  "round B scores exceeded the declared 0..1 criteria range (1.19..1.93): consumed as ORDINAL data only; ranking invariant to uniform rescale. The judge's own top-pick (p3, conf 0.86) contradicted its score product (p1 first) — judges advise, ledgers decide: lane ranks by product",
+  "lane curation bug: the _provenance metadata key of receipts/primitives.json was fed to the round-B judge as if it were a primitive (it scored it 0.9/1.37/1.44 — receipted verbatim in round-b-jev.answer.md). Fixed in scripts/ideate.mjs (metadata keys filtered); disclosed, not deleted",
+  "round A call-02 receipt records latency_ms=229, inconsistent with observed wall time (~40s); measurement suspect, token counts authoritative",
+  "round C's factual claims about channel quotas (e.g. cloudflare limits) are MODEL OPINIONS recorded as data — verified nowhere by this lane, build on nothing until verified"
+ ]
+}
